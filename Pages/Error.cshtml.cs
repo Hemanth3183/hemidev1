@@ -12,9 +12,9 @@ namespace hemidev.Pages
 
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
 
-        private readonly ILogger<ErrorModel> _logger;
+        private readonly Logger<ErrorModel> _logger;
 
-        public ErrorModel(ILogger<ErrorModel> logger)
+        public ErrorModel(Logger<ErrorModel> logger)
         {
             _logger = logger;
         }
