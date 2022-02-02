@@ -12,13 +12,6 @@ namespace hemidev.Pages
 
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
 
-        private readonly Logger<ErrorModel> _logger;
-
-        public ErrorModel(Logger<ErrorModel> logger)
-        {
-            _logger = logger;
-        }
-
         public void OnGet()
         {
             RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
